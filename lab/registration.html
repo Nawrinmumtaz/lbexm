@@ -1,0 +1,108 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Example</title>
+</head>
+<body>
+<fieldset>
+    <legend><b>REGISTRATION</b></legend>
+	<form name="myform"  onsubmit="return validateform()" >  
+		<br/>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td>Name</td>
+				<td>:</td>
+				<td><input name="name" type="text"><p id="demo"></p></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Email</td>
+				<td>:</td>
+				<td>
+					<input name="email" type="text"><div onmousemove="myMoveFunction()">
+   <span id="demo3"><b>i</b></span></p>
+</div>
+					
+				</td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>User Name</td>
+				<td>:</td>
+				<td><input name="userName" type="text"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Password</td>
+				<td>:</td>
+				<td><input name="password" type="password"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td>Confirm Password</td>
+				<td>:</td>
+				<td><input name="confirmPassword" type="password"></td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td colspan="3">
+					<fieldset>
+						<legend>Gender</legend>    
+						<input name="gender" type="radio">Male
+						<input name="gender" type="radio">Female
+						<input name="gender" type="radio">Other
+						<p id="demo1">Select atleast one</p>
+					</fieldset>
+				</td>
+				<td></td>
+			</tr>		
+			<tr><td colspan="4"><hr/></td></tr>
+			<tr>
+				<td colspan="3">
+					<fieldset>
+						<legend>Date of Birth</legend>    
+						<input type="text" size="2" />/
+						<input type="text" size="2" />/
+						<input type="text" size="4" />
+						<font size="2"><i>(dd/mm/yyyy)</i></font>
+					</fieldset>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		<hr/>
+		<input type="submit" value="Submit">
+		<input type="reset">
+	</form>
+</fieldset>
+<script>
+function validateform(){  
+var name=document.myform.name.value;  
+var x="ABCDEFGHIJKLMNOPQRSTUVWXYZ";  
+var gender=document.myform.gender.value;  
+if (name==null || name==""){ 
+  document.getElementById("demo").innerHTML = "Please enter your name";
+  return false;  
+}
+if(name.length<2)
+{alert("Atleast two letters in name needed");} 
+if (gender==null || gender==""){ 
+  document.getElementById("demo1").innerHTML = "Please select a gender";
+  return false;  
+}
+}  
+
+function myMoveFunction() {
+  document.getElementById("demo3").innerHTML ="hint: sample@example.com" ;
+}
+
+</script>
+
+</body>
+</html>
